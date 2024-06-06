@@ -36,7 +36,7 @@ export class PicRotatorComponent {
         }, flipDelay);
       }
     };
-    
+
     // Start flipping to the next image
     flipNext();
   }
