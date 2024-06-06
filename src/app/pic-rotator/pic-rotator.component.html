@@ -1,6 +1,16 @@
-<div>
-	<img src="assets/images/Phone-Jotto-Scan.png" alt="Scan">
-	<img src="assets/images/Phone-Jotto-Insights.png" alt="Insight">
-	<img src="assets/images/Phone-Jotto-Feedback.png" alt="Feedback">
-	<button (click)="nextPic()">Next Pic </button>
-</div>
+
+<div class="flip-container">
+    <div class="flipper flex flex-col" [ngClass]="{'flipped': isFlipped}">
+      <div class="front">
+        <img [src]="currentImage.src" [alt]="currentImage.alt">
+      </div>
+    </div>
+    
+  </div>
+  <br><br><br>
+  <button (click)="flip()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 mx-auto block">
+    Button
+ </button>
+
+  
+  

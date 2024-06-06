@@ -1,0 +1,36 @@
+.flip-container {
+  perspective: 1000px;
+  display: inline-block; /* Adjust as needed */
+}
+
+.flipper {
+  display: inline-block; /* Adjust as needed */
+  transform-style: preserve-3d;
+  transition: transform .5s ease-in-out;
+}
+
+.flipper.flipped {
+  transform: rotateY(360deg); /* Flip the flipper element */
+}
+
+.front,
+.back {
+  width: auto; /* Make the faces fit the size of the content */
+  height: auto; /* Make the faces fit the size of the content */
+  backface-visibility: hidden; /* Hide the backface of the image */
+}
+
+.front {
+  z-index: 1; /* Ensure front image is on top */
+}
+
+.back {
+  transform: rotateY(360deg); /* Flip the back image */
+  z-index: 0; /* Place back image below front image */
+}
+
+.image {
+  max-width: 100%; /* Ensure the image fits within the face container */
+  max-height: 100%; /* Ensure the image fits within the face container */
+}
+

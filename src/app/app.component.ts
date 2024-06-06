@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { PicRotatorComponent } from './pic-rotator/pic-rotator.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
